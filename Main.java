@@ -25,18 +25,30 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
+                    System.out.println("+++++++++++++++++++++++++++++++");
                     System.out.println("Daftar Kendaraan ");
-                    
-                    OperasiKendaraan.inputPajak(scanner);
+                    System.out.println("+++++++++++++++++++++++++++++++");
+                    // OperasiKendaraan.inputPajak(scanner);
                     break;
                 case 2:
+                    System.out.println("+++++++++++++++++++++++++++++++");
+                    System.out.println("Masukkan Data Pembayaran");
+                    System.out.println("+++++++++++++++++++++++++++++++");
+                    System.out.println("Masukkan Nomer TNBK: ");
+                    String tnbk = scanner.nextLine();
+                    System.out.println("Bulan Bayar : ");
+                    int bln = scanner.nextInt();
                     OperasiKendaraan.lihatKendaraan();
                     break;
                 case 3:
+                    System.out.println("+++++++++++++++++++++++++++++++");
+                    System.out.println("TOTAL PENDAPATAN");
+                    System.out.println("+++++++++++++++++++++++++++++++");
                     OperasiPajak.lihatPajak();
                     break;
                 case 4:
-                    System.out.println("Terima kasih!");
+                    System.out.println("Daftar Trasaksi Pembayaran Pajak");
+                    
                     break;
                 default:
                     System.out.println("Menu tidak valid.");

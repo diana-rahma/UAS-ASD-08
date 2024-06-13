@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class OperasiPajak {
 
-    // Kendaraan ken[] = new Kendaraan[5];
+    Kendaraan ken[] = new Kendaraan[5];
     // // String bulan[] =  ['Januari', 'Februari'];
 
     // int idxKen = 0, idxPj =0;
@@ -14,6 +14,8 @@ public class OperasiPajak {
     //         System.out.println("");
     //     }
     // }
+
+
     // public static void inputPajak(Scanner scanner) {
     //     System.out.print("\nMasukkan nomor TNKB: ");
     //     String tnkb = scanner.nextLine();
@@ -54,7 +56,7 @@ public class OperasiPajak {
 
 
 
-    public static void inputPajak(Scanner scanner) {
+    public void inputPajak(Scanner scanner) {
         System.out.print("\nMasukkan nomor TNKB: ");
         String tnkb = scanner.nextLine();
         System.out.print("Masukkan bulan bayar pajak: ");
@@ -71,6 +73,21 @@ public class OperasiPajak {
             System.out.println("Data pajak berhasil dimasukkan.");
         } else {
             System.out.println("Kendaraan dengan nomor TNKB " + tnkb + " tidak ditemukan.");
+        }
+    }
+
+    public void selectionSort(){
+        for(int i=0; i<ken.length-1; i++){
+            int idxMin = i;
+            for(int j=i+1; j<ken.length; j++){
+                if(ken[j].noTNKB.equalsIgnoreCase(ken[idxMin].noTNKB)){
+                    idxMin = j;
+                }
+            }
+
+            Kendaraan tmp = ken[idxMin];
+            ken[idxMin] = ken[i];
+            ken[i] = tmp;
         }
     }
 
